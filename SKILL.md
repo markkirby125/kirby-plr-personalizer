@@ -11,41 +11,6 @@ triggers: [personalize-plr, rewrite-plr, de-genericize, plr-makeover, framework-
 
 ---
 
-## 1. Executive Summary & The "PLR Paradox"
-
-Private Label Rights (PLR) content offers rapid market entry, but carries an inherent flaw: **generic neutrality**. To appeal to the broadest possible buyer base, PLR authors strip out specific subniche terminology, polarizing opinions, and personal human experiences. 
-
-Publishing raw or lightly spun PLR creates two catastrophic failures:
-1. **The Ghost Town Effect:** The content reads like corporate documentation ("Every Marketer Everywhere"), failing to build audience rapport, retention, or trust.
-2. **The PLR Pile-Up:** Operators buy content, realize it requires grueling sentence-by-sentence manual editing, stall out, and let valuable digital assets rot in digital hoarding folders.
-
-The **Two-Way Personalization System** solves this paradox by decoupling personalization into two parallel vectors and re-combining them in a deterministic single pass (**Framework Fusion**).
-
-```
-┌─────────────────────────────────────────────────────────┐
-│                    Raw Generic PLR                      │
-│        (Neutral concepts, generic advice, no voice)     │
-└────────────────────────────┬────────────────────────────┘
-                             │
-                             ▼
-┌─────────────────────────────────────────────────────────┐
-│               Framework Fusion Engine                   │
-├────────────────────────────┬────────────────────────────┤
-│  Vector 1: Audience Intel  │  Vector 2: Voice & Story   │
-│  - Subniche vocabulary     │  - Author Voice DNA        │
-│  - Specific friction/pains │  - Anecdotes & scars       │
-│  - Concrete domain context │  - Signature cadence       │
-└────────────────────────────┴────────────────────────────┘
-                             │
-                             ▼
-┌─────────────────────────────────────────────────────────┐
-│          Distinctive, High-Converting Asset             │
-│    (Indistinguishable from custom-authored content)     │
-└─────────────────────────────────────────────────────────┘
-```
-
----
-
 ## 2. The Two Vectors of Personalization
 
 Personalization fails when operators attempt to "just rewrite" text without structured constraints. True transformation requires two distinct inputs:
@@ -98,30 +63,19 @@ Before executing the rewrite, ensure the agent has access to (or extracts):
 * *Note: If datasets are missing, invoke `kirby-audience-intel-profiler` and `kirby-storyline-bank` to generate them on the fly.*
 
 ### Phase 3: Framework Fusion Execution
-Execute the single-pass fusion using the deterministic prompt template:
+Execute the single-pass fusion using the following directives:
 
-```markdown
-You are an elite editorial writer and direct-response content strategist.
-Your task is to rewrite the provided raw PLR excerpt using Framework Fusion.
+**Inputs Required:**
+1. **RAW PLR:** {{INSERT_RAW_PLR_TEXT}}
+2. **AUDIENCE INTEL:** Target Audience ({{TARGET_SUBNICHE}}) and Insider Lexicon / Real-world stakes ({{LEXICON_AND_PAIN_POINTS}})
+3. **AUTHOR VOICE & STORYLINE:** Voice Tone / Cadence ({{VOICE_DNA_SUMMARY}}) and Personal Story / Micro-Anecdote ({{ANECDOTE_OR_LESSON}})
 
-[INPUT 1: RAW PLR]
-{{INSERT_RAW_PLR_TEXT}}
-
-[INPUT 2: AUDIENCE INTEL]
-Target Audience: {{TARGET_SUBNICHE}}
-Insider Lexicon / Real-world stakes: {{LEXICON_AND_PAIN_POINTS}}
-
-[INPUT 3: AUTHOR VOICE & STORYLINE]
-Voice Tone / Cadence: {{VOICE_DNA_SUMMARY}}
-Personal Story / Micro-Anecdote: {{ANECDOTE_OR_LESSON}}
-
-[EXECUTION DIRECTIVES]
+**Execution Directives:**
 1. Retain the core actionable advice or instructional framework from the raw PLR.
 2. Eliminate all generic, corporate, or filler introductory phrases.
 3. Anchor all explanations directly into the Target Audience's daily operational reality using their vocabulary.
 4. Seamlessly weave the Author's micro-story or lesson into the narrative as proof/context, ensuring it feels organic rather than bolted-on.
 5. Match the requested voice cadence (sentence length variety, conversational tone, direct perspective).
-```
 
 ### Phase 4: Conformance & Diagnostic Audit
 Verify the output meets the anti-slop threshold:
