@@ -1,0 +1,174 @@
+---
+name: kirby-plr-personalizer
+description: "Master engine for personalizing raw, generic Private Label Rights (PLR) content using the Two-Way Framework Fusion methodology (Audience Intel + Voice DNA & Storylines)."
+category: writing
+triggers: [personalize-plr, rewrite-plr, de-genericize, plr-makeover, framework-fusion, plr-slop]
+---
+
+# SOP: Master Two-Way PLR Personalization & Framework Fusion
+
+> Standard Operating Procedure for rescuing generic, neutral Private Label Rights (PLR) content from the "PLR Pile-Up" and transforming it into high-converting, authoritative, and distinctive intellectual property using the Two-Way Personalization Engine.
+
+---
+
+## 1. Executive Summary & The "PLR Paradox"
+
+Private Label Rights (PLR) content offers rapid market entry, but carries an inherent flaw: **generic neutrality**. To appeal to the broadest possible buyer base, PLR authors strip out specific subniche terminology, polarizing opinions, and personal human experiences. 
+
+Publishing raw or lightly spun PLR creates two catastrophic failures:
+1. **The Ghost Town Effect:** The content reads like corporate documentation ("Every Marketer Everywhere"), failing to build audience rapport, retention, or trust.
+2. **The PLR Pile-Up:** Operators buy content, realize it requires grueling sentence-by-sentence manual editing, stall out, and let valuable digital assets rot in digital hoarding folders.
+
+The **Two-Way Personalization System** solves this paradox by decoupling personalization into two parallel vectors and re-combining them in a deterministic single pass (**Framework Fusion**).
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                    Raw Generic PLR                      │
+│        (Neutral concepts, generic advice, no voice)     │
+└────────────────────────────┬────────────────────────────┘
+                             │
+                             ▼
+┌─────────────────────────────────────────────────────────┐
+│               Framework Fusion Engine                   │
+├────────────────────────────┬────────────────────────────┤
+│  Vector 1: Audience Intel  │  Vector 2: Voice & Story   │
+│  - Subniche vocabulary     │  - Author Voice DNA        │
+│  - Specific friction/pains │  - Anecdotes & scars       │
+│  - Concrete domain context │  - Signature cadence       │
+└────────────────────────────┴────────────────────────────┘
+                             │
+                             ▼
+┌─────────────────────────────────────────────────────────┐
+│          Distinctive, High-Converting Asset             │
+│    (Indistinguishable from custom-authored content)     │
+└─────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 2. The Two Vectors of Personalization
+
+Personalization fails when operators attempt to "just rewrite" text without structured constraints. True transformation requires two distinct inputs:
+
+### Vector 1: Audience-Driven Intel (Subniche Filtering)
+Tuning broad concepts to the precise reality of a targeted micro-audience:
+* **Broad PLR Concept:** *"Setting priorities is an important step in getting more done."*
+* **Audience Tuning (e.g., Solo eCommerce Store Owners):** *"When peak holiday shipping hits and you have 47 unfulfilled orders on Shopify, prioritizing supplier check-ins over tweaking your banner image is what keeps you from drowning."*
+* **Mechanics:** Injects native industry lexicon, addresses actual operational friction, replaces hypothetical generalizations with domain-specific stakes.
+
+### Vector 2: Voice & Storyline Infusion (Human Handprint)
+Injecting the author's lived experiences, failures, tone quirks, and perspective:
+* **Broad PLR Concept:** *"Starting an email list requires consistency."*
+* **Voice/Story Tuning:** *"Back in 2019, I let my newsletter sit silent for four months because I thought I needed a 10-part masterclass ready. When I finally hit send on a raw 3-paragraph update, I made $1,200 in 24 hours. The lesson? Perfection is a coward's excuse."*
+* **Mechanics:** Drops in micro-stories, business scars, conversational cadence, signature phrases, and personal stance.
+
+---
+
+## 3. The 4-Step Personalization Lifecycle
+
+```
+[Phase 1: Input Ingestion]
+  ├── Ingest Raw PLR Asset
+  └── Tag Core Concept & Subtopics
+          │
+          ▼
+[Phase 2: Dataset Assembly]
+  ├── Select/Generate Audience Intel Dataset (Vector 1)
+  └── Select/Generate Voice DNA & Storyline Bank (Vector 2)
+          │
+          ▼
+[Phase 3: Framework Fusion Execution]
+  ├── Run Single-Pass Fusion Prompt
+  └── Preserve Educational Meat / Strip Generic Slop
+          │
+          ▼
+[Phase 4: Conformance & Diagnostic Audit]
+  ├── Audit against 15-point diagnostic checklist
+  └── Ensure zero lingering PLR fingerprints
+```
+
+### Phase 1: Input Ingestion
+1. Read the source PLR text.
+2. Identify the **Core Educational Value**: Strip fluff introductions ("In today's fast-paced world..."). Isolate the underlying steps, frameworks, or advice.
+
+### Phase 2: Dataset Assembly
+Before executing the rewrite, ensure the agent has access to (or extracts):
+* **Audience Intel Profile**: Defined target avatar, vocabulary/jargon whitelist, taboo generic terms, top 3 current frustrations.
+* **Storyline / Voice Spec**: Author tone guidelines, target cadence, 1-2 relevant personal anecdotes or case study lessons.
+* *Note: If datasets are missing, invoke `kirby-audience-intel-profiler` and `kirby-storyline-bank` to generate them on the fly.*
+
+### Phase 3: Framework Fusion Execution
+Execute the single-pass fusion using the deterministic prompt template:
+
+```markdown
+You are an elite editorial writer and direct-response content strategist.
+Your task is to rewrite the provided raw PLR excerpt using Framework Fusion.
+
+[INPUT 1: RAW PLR]
+{{INSERT_RAW_PLR_TEXT}}
+
+[INPUT 2: AUDIENCE INTEL]
+Target Audience: {{TARGET_SUBNICHE}}
+Insider Lexicon / Real-world stakes: {{LEXICON_AND_PAIN_POINTS}}
+
+[INPUT 3: AUTHOR VOICE & STORYLINE]
+Voice Tone / Cadence: {{VOICE_DNA_SUMMARY}}
+Personal Story / Micro-Anecdote: {{ANECDOTE_OR_LESSON}}
+
+[EXECUTION DIRECTIVES]
+1. Retain the core actionable advice or instructional framework from the raw PLR.
+2. Eliminate all generic, corporate, or filler introductory phrases.
+3. Anchor all explanations directly into the Target Audience's daily operational reality using their vocabulary.
+4. Seamlessly weave the Author's micro-story or lesson into the narrative as proof/context, ensuring it feels organic rather than bolted-on.
+5. Match the requested voice cadence (sentence length variety, conversational tone, direct perspective).
+```
+
+### Phase 4: Conformance & Diagnostic Audit
+Verify the output meets the anti-slop threshold:
+- [ ] Are any broad placeholders ("entrepreneurs", "success", "businesses") remaining?
+- [ ] Does the story flow logically into the instructional takeaway without clashing?
+- [ ] Is the reading level and terminology authentic to the subniche?
+- [ ] If any diagnostic defect is flagged, route to `kirby-plr-diagnostic-debugger`.
+
+---
+
+## 4. Operational Modes: 2-Minute Makeover vs. Batch Pipeline
+
+### The 2-Minute Makeover (Rapid Ad-Hoc Execution)
+When a single piece needs immediate publishing:
+1. Copy raw PLR paragraph/article.
+2. Feed into the **On-The-Fly Storyline Infusion Prompt** (see [references/prompt-recipes.md](references/prompt-recipes.md)).
+3. Request 2 candidate variations (conversational vs. authoritative).
+4. Review, select, publish.
+
+### The Batch Scaling System (10 Pieces Per Day)
+To eliminate the PLR backlog:
+1. **Modular Dataset Pre-loading:** Maintain persistent `audience_profile.json` and `storyline_bank.json`.
+2. **Chunking:** Break large PLR ebooks/reports into modular chapters or 500-word standalone topics.
+3. **Pipelined Execution:** Run batch transforms through Framework Fusion, outputting formatted drafts ready for distribution.
+
+---
+
+## 5. Modular Skill Ecosystem & Dispatcher Routing
+
+This skill acts as the master conductor. Route sub-tasks to specialized companion skills:
+
+| Task / Domain | Target Companion Skill |
+|---|---|
+| Deep Avatar Profiling & Lexicon Extraction | `kirby-audience-intel-profiler` |
+| Author Style, Cadence & Tone Codification | `kirby-voice-dna-extractor` |
+| Curating & Querying Personal Experience Banks | `kirby-storyline-bank` |
+| Converting PLR into 10 Email Sequence Types | `kirby-plr-email-sequences` |
+| Turning Informational PLR into Direct-Response Sales Pages | `kirby-plr-sales-converter` |
+| Cascading 1 Asset into 12 Platform-Native Posts | `kirby-plr-omnichannel-repurposer` |
+| Repairing Tone Drift, Forced Stories, or Residual PLR Slop | `kirby-plr-diagnostic-debugger` |
+
+---
+
+## 6. Reference Documentation Index
+
+For deep operational templates and prompt libraries, consult:
+* [references/framework-fusion-guide.md](references/framework-fusion-guide.md) — Comprehensive comparative analysis and fusion examples.
+* [references/modular-datasets.md](references/modular-datasets.md) — Schemas for Audience Datasets and Storyline Banks.
+* [references/two-minute-makeover.md](references/two-minute-makeover.md) — High-velocity workflows for rapid deployment.
+* [references/prompt-recipes.md](references/prompt-recipes.md) — Exact master prompt templates.
