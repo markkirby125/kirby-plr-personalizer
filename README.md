@@ -1,8 +1,8 @@
 # kirby-plr-personalizer
 
-*This skill is part of the [Kirby Skills Collection](https://github.com/markkirby125/kirby-skills-collection).*
+*This skill is part of the [Tiffany Lambert PLR Skills Collection](https://github.com/markkirby125/kirby-skills-tiff-collection).*
 
-Master orchestrator for personalizing raw, generic Private Label Rights (PLR) content using the Two-Way Framework Fusion methodology (Audience-Driven Intel + Voice DNA & Storyline Banks).
+Master orchestrator for personalising raw, generic Private Label Rights (PLR) content using the Two-Way Framework Fusion methodology (Audience-Driven Intel + Voice DNA & Storyline Banks).
 
 Raw PLR suffers from neutral mediocrity and leads to digital hoarding ("The PLR Pile-Up"). This skill provides an autonomous agent pipeline to inject authentic human voice, lived business experiences, and razor-sharp subniche vernacular into generic content in a single deterministic pass.
 
