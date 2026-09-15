@@ -1,6 +1,6 @@
 ---
 name: kirby-plr-personalizer
-description: "Master engine for personalizing raw, generic Private Label Rights (PLR) content using the Two-Way Framework Fusion methodology (Audience Intel + Voice DNA & Storylines)."
+description: "Use when rewriting raw PLR with audience intel plus Voice DNA and storylines."
 category: writing
 triggers: [personalize-plr, rewrite-plr, de-genericize, plr-makeover, framework-fusion, plr-slop]
 ---
@@ -11,7 +11,7 @@ triggers: [personalize-plr, rewrite-plr, de-genericize, plr-makeover, framework-
 
 ---
 
-## 2. The Two Vectors of Personalization
+## 1. The Two Vectors of Personalization
 
 Personalization fails when operators attempt to "just rewrite" text without structured constraints. True transformation requires two distinct inputs:
 
@@ -29,7 +29,7 @@ Injecting the author's lived experiences, failures, tone quirks, and perspective
 
 ---
 
-## 3. The 4-Step Personalization Lifecycle
+## 2. The 4-Step Personalization Lifecycle
 
 ```
 [Phase 1: Input Ingestion]
@@ -57,10 +57,11 @@ Injecting the author's lived experiences, failures, tone quirks, and perspective
 2. Identify the **Core Educational Value**: Strip fluff introductions ("In today's fast-paced world..."). Isolate the underlying steps, frameworks, or advice.
 
 ### Phase 2: Dataset Assembly
-Before executing the rewrite, ensure the agent has access to (or extracts):
-* **Audience Intel Profile**: Defined target avatar, vocabulary/jargon whitelist, taboo generic terms, top 3 current frustrations.
-* **Storyline / Voice Spec**: Author tone guidelines, target cadence, 1-2 relevant personal anecdotes or case study lessons.
-* *Note: If datasets are missing, invoke `kirby-audience-intel-profiler` and `kirby-storyline-bank` to generate them on the fly.*
+Before executing the rewrite, load these three canonical files (same names everywhere in the suite):
+* `audience_profile.yaml` — avatar, `lexicon_whitelist`, `taboo_generic_terms`, `daily_friction_points`. Producer: `kirby-audience-intel-profiler`.
+* `voice_dna.yaml` — posture, cadence, signature terms, taboo list. Producer: `kirby-voice-dna-extractor`.
+* `storyline_bank.json` — array of archetype entries with `topics`, `target_emotions`, `narrative_beats`. Producer: `kirby-storyline-bank`.
+* If a file is missing, invoke the producer skill and write that filename. Do not invent a fourth filename.
 
 ### Phase 3: Framework Fusion Execution
 Execute the single-pass fusion using the following directives:
@@ -86,7 +87,7 @@ Verify the output meets the anti-slop threshold:
 
 ---
 
-## 4. Operational Modes: 2-Minute Makeover vs. Batch Pipeline
+## 3. Operational Modes: 2-Minute Makeover vs. Batch Pipeline
 
 ### The 2-Minute Makeover (Rapid Ad-Hoc Execution)
 When a single piece needs immediate publishing:
@@ -97,13 +98,13 @@ When a single piece needs immediate publishing:
 
 ### The Batch Scaling System (10 Pieces Per Day)
 To eliminate the PLR backlog:
-1. **Modular Dataset Pre-loading:** Maintain persistent `audience_profile.json` and `storyline_bank.json`.
+1. **Modular Dataset Pre-loading:** Maintain persistent `audience_profile.yaml`, `voice_dna.yaml`, and `storyline_bank.json`.
 2. **Chunking:** Break large PLR ebooks/reports into modular chapters or 500-word standalone topics.
 3. **Pipelined Execution:** Run batch transforms through Framework Fusion, outputting formatted drafts ready for distribution.
 
 ---
 
-## 5. Modular Skill Ecosystem & Dispatcher Routing
+## 4. Modular Skill Ecosystem & Dispatcher Routing
 
 This skill acts as the master conductor. Route sub-tasks to specialized companion skills:
 
@@ -119,7 +120,7 @@ This skill acts as the master conductor. Route sub-tasks to specialized companio
 
 ---
 
-## 6. Reference Documentation Index
+## 5. Reference Documentation Index
 
 For deep operational templates and prompt libraries, consult:
 * [references/framework-fusion-guide.md](references/framework-fusion-guide.md) — Comprehensive comparative analysis and fusion examples.

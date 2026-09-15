@@ -1,80 +1,92 @@
 # Modular Dataset Architecture: Plug-and-Play Personalization
 
-To enable high-volume personalization without repetitive prompt writing, maintain modular JSON or Markdown dataset files in your workspace or agent context.
+The suite uses **exactly three** canonical files. Do not invent suffixes or alternate field names. Producers: `kirby-audience-intel-profiler`, `kirby-voice-dna-extractor`, `kirby-storyline-bank`.
 
 ---
 
-## 1. Audience Intel Dataset Schema
+## 1. Audience Intel — `audience_profile.yaml`
 
-Save as `audience_intel_[niche].json` or `.md`:
+Schema owned by `kirby-audience-intel-profiler`.
 
-```json
-{
-  "avatar_name": "Solo Shopify Brand Owner",
-  "experience_level": "Intermediate (Running store, generating $3k-$15k/mo)",
-  "daily_operational_realities": [
-    "Managing inventory stockouts and 3PL delays",
-    "Struggling with rising Meta/TikTok CPMs",
-    "Handling customer service returns and chargeback disputes",
-    "Constant anxiety over single-channel dependency"
-  ],
-  "insider_lexicon": [
-    "ROAS", "AOV", "churn", "abandoned cart", "chargebacks", 
-    "SKU", "supplier lead times", "unfulfilled orders", "drops", "UGC"
-  ],
-  "taboo_generic_words": [
-    "entrepreneur", "business owner", "make sales", "traffic", "products"
-  ],
-  "common_objections": [
-    "I don't have time to write emails; I'm packing boxes.",
-    "My profit margins are too thin to spend money on that.",
-    "I've tried generic advice before and it didn't work for e-commerce."
-  ],
-  "aspirational_identity": "Building a recognized direct-to-consumer lifestyle brand with recurring loyal buyers."
-}
+```yaml
+---
+audience_profile:
+  avatar_name: "B2B Fractional CMO"
+  target_market: "Solo consultants advising $2M-$10M ARR companies"
+  experience_level: "Senior (Ex-VP of Marketing / Senior Agency Director)"
+  lexicon_whitelist:
+    - "pipeline velocity"
+    - "attribution model"
+  taboo_generic_terms:
+    - "make sales"
+    - "get clients"
+  daily_friction_points:
+    - "Founders micromanaging channel tactics instead of letting strategy run"
+  core_objections_to_training:
+    - "Generic marketing courses are insulting."
+  aspirational_victory: "Four high-retainer accounts, quarterly advisory calls only."
+---
 ```
 
 ---
 
-## 2. Storyline & Lessons Bank Schema
+## 2. Voice DNA — `voice_dna.yaml`
 
-Save as `storyline_bank_[author].json` or `.md`:
+Schema owned by `kirby-voice-dna-extractor`.
+
+```yaml
+---
+voice_dna:
+  author_id: "operator_01"
+  posture: "Pragmatic Practitioner (direct, zero-fluff, tough love)"
+  reading_level: "Grade 7-8 (accessible, punchy, clear)"
+  cadence:
+    primary_sentence_length: "8-14 words"
+    fragment_frequency: "High (approx 2-3 per 250 words)"
+    pacing: "Fast, punchy, conversational transitions"
+  lexicon:
+    signature_terms: ["slog", "feast-or-famine", "operational drag"]
+    taboo_banned_words: ["delve", "tapestry", "game-changer"]
+    preferred_transitions: ["Look,", "Here is the truth:"]
+  formatting_quirks:
+    use_em_dashes: true
+    use_parenthetical_asides: true
+    max_paragraph_lines: 3
+  vulnerability_stance: "Openly cites specific dollar losses and wasted time"
+---
+```
+
+---
+
+## 3. Storyline Bank — `storyline_bank.json`
+
+Schema owned by `kirby-storyline-bank`. Top-level value is an **array**.
 
 ```json
-{
-  "author_profile": {
-    "name": "Operator Name",
-    "core_identity": "Pragmatic bootstrap operator who despises corporate fluff",
-    "tone_cadence": "Punchy, conversational, occasional dry humor, uses short sentence fragments for rhythm."
-  },
-  "stories": [
-    {
-      "id": "STORY-001",
-      "tags": ["goal_setting", "pricing", "failure", "agency_life"],
-      "trigger_topics": ["planning", "revenue goals", "client retainers", "undercharging"],
-      "summary": "Spent 2 years working 70-hour weeks charging $500/client until firing bottom 80% and 4x-ing prices.",
-      "emotional_arc": "Exhaustion and shame -> Realization of false busyness -> Radical restructuring -> Relief and doubled profits",
-      "key_quote": "Being busy is just a socially acceptable form of laziness when you're doing the wrong things."
+[
+  {
+    "id": "STORY-042",
+    "title": "The $8k Funnel Collapse",
+    "archetype": "Expensive Mistake",
+    "topics": ["funnels", "automation", "tech_stack", "launching"],
+    "target_emotions": ["overwhelm", "shame", "frustration"],
+    "one_sentence_hook": "I once watched $8,000 in ad spend evaporate in 48 hours because a single webhook was disconnected.",
+    "narrative_beats": {
+      "context": "Running a high-volume flash sale for a client in 2021.",
+      "conflict": "Traffic was surging, but Stripe dashboard was dead silent.",
+      "discovery": "Found a broken Zapier connection routing leads to a 404 page.",
+      "resolution": "Rebuilt the pipeline with zero complex automations and salvaged the launch."
     },
-    {
-      "id": "STORY-002",
-      "tags": ["email_marketing", "perfectionism", "first_sale"],
-      "trigger_topics": ["list building", "email copy", "imposter syndrome"],
-      "summary": "Delayed launching email newsletter for 6 months trying to write a 10-email sequence. Sent a 3-paragraph typo-filled update and made 4 sales in 2 hours.",
-      "emotional_arc": "Paralysis by analysis -> Desperation -> Imperfect action -> Immediate validation",
-      "key_quote": "Imperfect broadcasts beat pristine unwritten drafts every single day."
-    }
-  ]
-}
+    "core_lesson": "Complex automations are failure magnets; simple static pipelines protect your margins.",
+    "usable_snippets": [
+      "Simplicity isn't just aesthetic; it's operational insurance."
+    ]
+  }
+]
 ```
 
 ---
 
-## 3. The Modular Mix-and-Match Strategy
+## 4. Mix-and-match
 
-By keeping these datasets decoupled, an operator can take a single 5-pack of PLR productivity articles and produce:
-* 5 Articles for **Shopify Brand Owners** using **Operator's Agency Stories**
-* 5 Articles for **B2B Coaches** using **Operator's Corporate Exit Stories**
-* 5 Articles for **Real Estate Agents** using **Operator's Local Marketing Stories**
-
-This modularity multiplies the lifetime ROI of any PLR purchase by 10x to 50x.
+Swap `audience_profile.yaml` or `storyline_bank.json` between runs. Do not rename the files.
