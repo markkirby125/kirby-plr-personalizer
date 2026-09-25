@@ -3,6 +3,9 @@ name: kirby-plr-personalizer
 description: "Use when rewriting raw PLR with audience intel plus Voice DNA and storylines."
 category: writing
 triggers: [personalize-plr, rewrite-plr, de-genericize, plr-makeover, framework-fusion, plr-slop]
+risk: unverified
+author: william-fitzpatrick
+tags: [kirby, ai-agent, workflow]
 ---
 
 # SOP: Master Two-Way PLR Personalization & Framework Fusion
@@ -127,3 +130,14 @@ For deep operational templates and prompt libraries, consult:
 * [references/modular-datasets.md](references/modular-datasets.md) — Schemas for Audience Datasets and Storyline Banks.
 * [references/two-minute-makeover.md](references/two-minute-makeover.md) — High-velocity workflows for rapid deployment.
 * [references/prompt-recipes.md](references/prompt-recipes.md) — Exact master prompt templates.
+
+
+## Examples
+
+*(Add specific conversational examples here showing how the agent should behave.)*
+
+
+## Limitations (When NOT to Use)
+
+- Do not use this skill outside of its intended scope.
+- Stop and ask the user for clarification if the requirements are ambiguous.
