@@ -4,7 +4,7 @@ description: "Use when rewriting raw PLR with audience intel plus Voice DNA and 
 category: writing
 triggers: [personalize-plr, rewrite-plr, de-genericize, plr-makeover, framework-fusion, plr-slop]
 risk: unverified
-author: william-fitzpatrick
+author: paul-kirby
 tags: [kirby, ai-agent, workflow]
 ---
 
