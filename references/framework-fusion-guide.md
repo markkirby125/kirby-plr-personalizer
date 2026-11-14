@@ -34,10 +34,13 @@ To understand the mechanics, observe how a single generic PLR paragraph evolves 
 
 ## 2. Fusion Mechanics Checklist
 
-When generating a Framework Fusion pass, enforce these five constraints:
+When generating a Framework Fusion pass, enforce these constraints:
 
 1. **The Pivot Point:** Locate the exact sentence where the author's micro-story hands off the torch to the reader's actionable takeaway. (e.g., *"The breakthrough wasn't X; it was Y. Here is what this means for your..."*).
 2. **Subniche Lexicon Density:** Ensure at least 3-5 domain-native terms appear naturally in every 200 words (e.g., *CAC, churn, retainers, SKU count, cold pitch, deliverability*).
 3. **Pacing Balance:** The personal anecdote should occupy no more than 25-35% of the total word count. The remaining 65-75% must deliver actionable value for the reader.
 4. **Emotional Resonance:** Ensure the pain described matches the emotional reality of the target avatar, not hypothetical inconvenience.
 5. **No AI Meta-Talk:** Ban introductory throat-clearing ("Let's dive into...", "In this section, we will explore...", "As an entrepreneur...").
+6. **Zero-Invention Grounding:** Use only verified dates, metrics, and scars from `storyline_bank.json` or operator input. Never fabricate proof to fill narrative gaps; insert `[VERIFY: ...]` if data is missing.
+7. **Structural Anti-Lookalike Rule:** Reorder/restructure boilerplate PLR section skeletons and replace stock-photo placeholders rather than noun-swapping subheadings in place.
+8. **Web-Guide Extraction & Proof (when publishing to the web):** Use buyer-question / fan-out `H2`/`H3` phrasing with verbatim tool/competitor names, concede real trade-offs or competitor strengths where appropriate, and optionally weave a contextualized **4-Slot Standalone Brand Proof Passage** (`[BRAND NAME] + [SPECIFIC PROOF] + [THE SERVICE] + [WHY IT MATTERS TO THE READER]`, 2–3 sentences with real dated numbers—never copy-pasted as boilerplate spam).
