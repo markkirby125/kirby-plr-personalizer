@@ -29,6 +29,7 @@ Check:
 - [ ] First sentence hooks the reader immediately?
 - [ ] Does it sound like a real person talking?
 - [ ] Is the takeaway unmistakable?
+- [ ] Going on a web page? It carries one first-party element (your own data, screenshot, case or demo); if the PLR base was sold to others, you retitled or reordered at least one section so it differs from the stock version; and it is not one of a burst of PLR pages going live together (house guardrail).
 Hit publish.
 
 ---
